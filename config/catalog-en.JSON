@@ -1,0 +1,21 @@
+{
+    "en": {
+      "translation": {
+        "Welcome to React": "Welcome to React and react-i18next",
+        "welcome": "Welcome2",
+        "connaitre": "Discover me",
+        "réalisations":"My projects",
+        "labs":"My lab",
+        "contact":"Contact me"
+      }},
+    "fr": {
+      "translation": {
+        "Welcome to React": "Bienvenue dans React et react-i18next",
+        "welcome": "WelcomeFR",
+        "connaitre" : "Me connaitre" ,
+        "réalisations":"Mes réalisations",
+        "labs":"Mon labo",
+        "contact":"Me contacter"
+      }
+    }
+  }

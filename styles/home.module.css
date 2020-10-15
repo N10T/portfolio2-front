@@ -1,0 +1,9 @@
+.main {
+    background-image: url("../public/images/background-landingpage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }

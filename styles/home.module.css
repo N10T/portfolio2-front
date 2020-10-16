@@ -1,9 +1,25 @@
 .main {
-    background-image: url("../public/images/background-landingpage.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
+  /* background-image: url("../public/images/background-landingpage.jpg"); */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.main h1 {
+  z-index: 1;
+}
+
+.image {
+  z-index: 1;
+  height: 100vh;
+  position: absolute;
+left : 0
+}
+.band {
+  position: absolute;
+  top: 35vh;
+  height: 30vh;
+  width: 100vw;
+  background-color: #F4C141;
+}

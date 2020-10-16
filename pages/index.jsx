@@ -15,6 +15,8 @@ function Home({context}) {
 
   return (
     <div className={styles.main}>
+      <div className={styles.band}></div>
+      <img className={styles.image} src="./images/background-me.gif" alt="foo"/>
       <h1>En construction</h1>
       {/* <button onClick={()=>chooseLng("en")}>English</button>
       <button onClick={()=>chooseLng("fr")}>Francais</button>

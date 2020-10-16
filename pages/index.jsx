@@ -3,15 +3,16 @@ import styles from "../styles/home.module.css";
 import i18nInit from "../config/i18n"
 import { useTranslation, initReactI18next, FormattedString } from "react-i18next";
 import withContext from '../components/withContext';
+import React from "react"
 // import i18n from "i18next";
 // import { FormattedString } from "react-i18next";
 
-
 function Home({context}) {
-  const {lng,resources,chooseLng} = context
-  i18nInit (resources,lng)
-  const { t } = useTranslation();
-console.log(context);
+//   const {lng,resources,chooseLng} = context
+//   i18nInit (resources,lng)
+//   const { t } = useTranslation();
+// console.log(context);
+
   return (
     <div className={styles.main}>
       <h1>En construction</h1>
@@ -34,5 +35,33 @@ console.log(context);
     </div>
   );
 }
+
+
+
+
+
+class Home2 extends React.Component {
+  state = {count:0}
+componentDidMount(){
+  const interval = setInterval(() => {
+    console.log(this.state.count);
+    this.setState({count:this.state.count+1})
+  }, 1000);
+}
+
+componentWillUnmount(){
+  clearInterval(interval)
+}
+  render() {
+    return (
+      <div>
+        {this.state.count}
+      </div>
+    )
+  }
+}
+
+
+
 
 export default withContext(Home)

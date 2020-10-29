@@ -1,9 +1,12 @@
-.main {
+.buttons {
   /* background-image: url("../public/images/background-landingpage.jpg"); */
-  height: 100vh;
+  height: 60vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  right: 20vw;
+  top: 20vh;
   z-index: 1;
 }
 .main h1 {
@@ -14,13 +17,105 @@
   z-index: 1;
   height: 100vh;
   position: absolute;
-left : 0;
-object-fit: cover;
+  left: 0;
+  object-fit: cover;
 }
+
 .band {
   position: absolute;
   top: 35vh;
   height: 30vh;
   width: 100vw;
-  background-color: #F4C141;
+  background-color: #f4c141;
+}
+
+.scaleDownCenter {
+  -webkit-animation: scale-down-center 1s both;
+  animation: scale-down-center 1s both;
+}
+
+.slideInTop {
+  -webkit-animation: slide-in-top 1s both;
+  animation: slide-in-top 1s both;
+}
+
+.slideInLeft {
+  -webkit-animation: slide-in-left 1s 1s both;
+  animation: slide-in-left 1s 1s both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(6);
+    transform: scale(6);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(6);
+    transform: scale(6);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
 }

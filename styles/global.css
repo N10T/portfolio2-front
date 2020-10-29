@@ -1,19 +1,28 @@
+:root {
+  --main-color: rgb(85, 170, 221);
+  --second-color: #ffd359;
+  --polygone-triangle: 12px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: #0070f3;
   text-decoration: none;
 }
 
@@ -24,4 +33,280 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.flex {
+  display: flex;
+}
+.right {
+  justify-content: flex-end;
+}
+.text-center {
+  text-align: center;
+}
+
+
+.band {
+border-radius: 4px;
+border: 2px solid white;
+}
+.exp-pro .band {
+  /* clip-path: polygon(
+    var(--polygone-triangle) 0%,
+    100% 0%,
+    100% 100%,
+    var(--polygone-triangle) 100%,
+    0% 50%
+  ); */
+  margin-left: -32px;
+  background-color: var(--main-color);
+  color:  var(--second-color);
+  padding: 0 16px;
+}
+
+.formation .band {
+  /* clip-path: polygon(
+    0% 0%,
+    calc(100% - var(--polygone-triangle)) 0%,
+    100% 50%,
+    calc(100% - var(--polygone-triangle)) 100%,
+    0 100%
+  ); */
+  margin-right: -32px;
+  background-color: var(--second-color);
+  color:  var(--main-color);
+  width: fit-content;
+  padding: 0 16px;
+}
+.card {
+  position: relative;
+  padding: 0px 16px 50px 16px;
+  min-width: 275px;
+  margin-bottom: 8px;
+}
+
+.card .company {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  color: rgba(0, 0, 0, 0.54);
+  /* font-size: 14px; */
+}
+
+.card .stack {
+  /* border-right:5px solid #FFD359; */
+  /* grid-template-columns: repeat(3, 64px); */
+  display: flex;
+  grid-template-rows: 1;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 8px;
+  position: absolute;
+  max-width: 80%;
+  height: 100%;
+  /* background-color: var(--main-color);
+  color: var(--second-color); */
+  /* font-weight: bold; */
+
+  padding: 8px;
+  top: 0;
+  right: calc(1em + 15px);
+}
+.stack > svg {
+  font-size: 2em;
+}
+
+.stack p {
+  font-size: 0.8em;
+}
+
+.formation .card .details {
+  padding-right: 16px;
+  direction: rtl;
+}
+
+.exp-pro .card .details {
+  max-width: 80%;
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.inverted-li {
+  text-align: center;
+  list-style: none;
+  padding: 0 1em;
+}
+/* .inverted-li::after {
+  font-size: 1em;
+  padding-left: 1em;
+  content: "•";
+} */
+
+/* .MuiTimelineOppositeContent-root {
+  flex:unset !important
+}
+
+.MuiCard-root {
+  border-radius: 16px !important;
+} */
+.formation .card {
+  text-align: right;
+  /* position: absolute; */
+  /* right: 0; */
+  /* margin-top: -200px; */
+  /* width: 40%; */
+}
+
+.card {
+  margin-top: -14px;
+}
+
+.formation .card .title {
+  clip-path: polygon(
+    var(--polygone-triangle) 0%,
+    100% 0%,
+    100% 100%,
+    var(--polygone-triangle) 100%,
+    0% 50%
+  );
+  background-color: var(--second-color);
+  color: var(--main-color);
+  margin-right: -32px;
+  padding: 0 32px;
+
+  font-size: 1.2em;
+}
+
+.exp-pro .card .position {
+  background-color: var(--main-color);
+  /* border-bottom: 4px solid; */
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - var(--polygone-triangle)) 0%,
+    100% 50%,
+    calc(100% - var(--polygone-triangle)) 100%,
+    0 100%
+  );
+  margin-left: -32px;
+  margin-bottom: 16px;
+  padding: 0 32px;
+  color: var(--second-color);
+}
+.card .company-logo {
+  max-width: 4vw;
+  max-height: 4vw;
+  /* opacity: 0.8; */
+}
+
+.card .logo-company-card {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 10%; */
+  /* display:inline */
+}
+.logo-bannier {
+  clip-path: polygon(20px 0, 100% 0%, 100% 100%, 20px 100%, 0% 50%);
+  /* clip-path: polygon(0 0, 100% 0%, 100% 100%,0px 100%, 20px 50%); */
+  border-top: 4px solid var(--second-color);
+  background-color: var(--main-color);
+
+  position: absolute;
+  border-radius: 8px 0 0 8px;
+  right: 0;
+  padding: 0 8px;
+  padding-left: 20px;
+  /* width: 80%; */
+  height: 64px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.logoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 64px;
+  height: 32px;
+  padding: 0 4px;
+  margin: 0 4px;
+}
+
+.logoCard * {
+  color: var(--second-color);
+}
+
+.logoCard svg {
+  font-size: 1.5em;
+  /* color: white; */
+}
+.logoCard span {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.logoCard img {
+  object-fit: contain;
+  height: 24px;
+}
+
+/* .logoCard.MuiPaper-root {
+  background-color: var(--main-color);
+} */
+
+.logoCard .MuiCardMedia-root {
+  /* object-fit: fill; */
+  height: 100%;
+  width: 100%;
+}
+
+.slide-in-right {
+  -webkit-animation: slide-in-blurred-right 0.5s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-blurred-right 0.5s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 }

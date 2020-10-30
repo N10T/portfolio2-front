@@ -24,21 +24,23 @@ const resume = {
         "Code review",
       ],
       stack: [
-        { name: "VanillaJS", fontAwersome: "faJsSquare" },
-        { name: "React", fontAwersome: "faReact" },
-        { name: "NodeJS", fontAwersome: "faNodeJs" },
-        { name: "HTML", fontAwersome: "faHtml5" },
-        { name: "CSS", fontAwersome: "faCss3Alt" },
+        { name: "VanillaJS", fontAwersome: "faJsSquare",skill:10 },
+        { name: "React", fontAwersome: "faReact",skill:8 },
+        { name: "NodeJS", fontAwersome: "faNodeJs",skill:8 },
+        { name: "HTML", fontAwersome: "faHtml5",skill:9 },
+        { name: "CSS", fontAwersome: "faCss3Alt",skill:8 },
         {
           name: "Hbs",
+          skill:7,
           url:
           "https://i0.wp.com/blog.fossasia.org/wp-content/uploads/2017/07/handlebars-js.png?fit=500%2C500&ssl=1",
         },
         {
           name: "MongoDB",
+          skill:7,
           url: "https://www.alwaysdata.com/static/img/technologies/databases/mongodb.png",
         },
-        { name: "Express", url:"https://2bp5av1fu3f9121glc3i2z5i-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/express.png" },
+        { name: "Express", url:"https://2bp5av1fu3f9121glc3i2z5i-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/express.png",skill:6 },
       ],
     },
     {
@@ -58,12 +60,12 @@ const resume = {
       ],
       // stack: ["VanillaJS", "React", "CanvasJS", "MaterielUI", "HTML", "CSS", "JSS"],
       stack: [
-        { name: "VanillaJS", fontAwersome: "faJsSquare" },
-        { name: "React", fontAwersome: "faReact" },
-        { name: "HTML", fontAwersome: "faHtml5" },
-        { name: "CSS", fontAwersome: "faCss3Alt" },
-        { name: "MaterielUI", url: "https://img.icons8.com/color/452/material-ui.png" },
-        { name: "CanvasJS" },
+        { name: "VanillaJS", fontAwersome: "faJsSquare",skill:7  },
+        { name: "React", fontAwersome: "faReact",skill:10  },
+        { name: "HTML", fontAwersome: "faHtml5",skill:8  },
+        { name: "CSS", fontAwersome: "faCss3Alt",skill:8  },
+        { name: "MaterielUI", url: "https://img.icons8.com/color/452/material-ui.png",skill:7  },
+        { name: "CanvasJS",skill:7  },
       ],
     },
     {

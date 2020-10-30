@@ -9,6 +9,7 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Typography from "@material-ui/core/Typography";
 import LaptopMacIcon from "@material-ui/icons/LaptopMac";
 import SchoolIcon from "@material-ui/icons/School";
+import TodayIcon from '@material-ui/icons/Today';
 
 import dayjs from "dayjs";
 import { CardExPro, CardFormation } from "../../UI/Card";
@@ -31,6 +32,14 @@ export default function OppositeContentTimeline({ context, work, formation, fixe
     <div className={style.timeline}>
       {/* <Tags setTags={setTags}/> */}
       <Timeline>
+      <TimelineItem >
+              <TimelineSeparator>
+                <TimelineDot color="secondary">
+                  <TodayIcon />
+                </TimelineDot>
+              </TimelineSeparator>
+              <TimelineContent/>
+            </TimelineItem>
         {allDatas.map((card, i) =>
           card.organisme ? (
             <TimelineItem key={i} className="formation">

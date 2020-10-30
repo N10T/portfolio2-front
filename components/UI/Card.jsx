@@ -6,6 +6,10 @@ import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import { theme } from "../../styles/palette";
 // import dayjs from "dayjs";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import clsx from 'clsx';
 
 import {
   faNodeJs,
@@ -16,16 +20,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import LogoCard from "../UI/LogoCard";
 const lib = { faNodeJs, faCss3Alt, faJsSquare, faReact, faHtml5 };
-// library.add(faNodeJs, faCss3Alt, faJsSquare, faReact, faHtml5);
-// [faJS,
-//     faReact,
-//     faNodeJS,
-//     faExpress,
-//     faHbs,
-//     faMongoDB,
-//     faMongoose,
-//     faHTML,
-//     CSS ]
+const foo = [
+  {
+    "name": "18-24",
+    "uv": 31.47,
+    "pv": 2400,
+    "fill": "#8884d8"
+  },
+]
 const useStyles = makeStyles({
   position: {
     // borderColor: theme.palette.secondary.main,
@@ -44,9 +46,24 @@ const styleJSS = (props) => ({
   pos: {
     marginBottom: 12,
   },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
 });
 
 function CardExPro({ data, expPro, highlight, context, ...props }) {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   const {
     position,
     company: { name, logoURL, url: companyURL },
@@ -79,7 +96,7 @@ function CardExPro({ data, expPro, highlight, context, ...props }) {
           ))}
         </ul>
         {stack && (
-          <div className="logo-bannier slide-in-right">
+          <div className={!expanded ? "logo-bannier slide-out-right " : "logo-bannier slide-in-right"} onClick={handleExpandClick}>
             {stack
               // .sort((a, b) => a.name.localeCompare(b.name))
               .map((elem, i) => (

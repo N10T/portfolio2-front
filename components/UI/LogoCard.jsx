@@ -8,12 +8,13 @@ import { theme } from "../../styles/palette";
 import Typography from "@material-ui/core/Typography";
 import CardMedia from "@material-ui/core/CardMedia";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { RadialBarChart, Legend, Tooltip, RadialBar } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 
-export default function LogoCard({ fontawersome, data: { skill, url, name } }) {
+export default function LogoCard({ fontawersome,expanded, data: { skill, url, name } }) {
+
   return (
-    <div className="logoCard">
-      <RadialBarChart
+    expanded && <div className="logoCard">
+       <RadialBarChart
         style={{ position: "absolute", bottom: 0 }}
         width={64}
         height={64}

@@ -32,14 +32,7 @@ export default function OppositeContentTimeline({ context, work, formation, fixe
     <div className={style.timeline}>
       {/* <Tags setTags={setTags}/> */}
       <Timeline>
-      <TimelineItem >
-              <TimelineSeparator>
-                <TimelineDot color="secondary">
-                  <TodayIcon />
-                </TimelineDot>
-              </TimelineSeparator>
-              <TimelineContent/>
-            </TimelineItem>
+      
         {allDatas.map((card, i) =>
           card.organisme ? (
             <TimelineItem key={i} className="formation">

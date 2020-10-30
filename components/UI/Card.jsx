@@ -96,11 +96,11 @@ function CardExPro({ data, expPro, highlight, context, ...props }) {
           ))}
         </ul>
         {stack && (
-          <div className={!expanded ? "logo-bannier slide-out-right " : "logo-bannier slide-in-right"} onClick={handleExpandClick}>
+          <div className={expanded ? "logo-bannier slide-in-right" : "logo-bannier"} onClick={handleExpandClick}>
             {stack
               // .sort((a, b) => a.name.localeCompare(b.name))
               .map((elem, i) => (
-                <LogoCard key={i} data={elem} fontawersome={lib[elem.fontAwersome]} />
+                <LogoCard key={i} data={elem} fontawersome={lib[elem.fontAwersome]} expanded={expanded} />
                 // elem.fontAwersome && <LogoCard><FontAwesomeIcon key={i} icon={lib[elem.fontAwersome]} /><p>{elem.name}</p></LogoCard>
               ))}
           </div>

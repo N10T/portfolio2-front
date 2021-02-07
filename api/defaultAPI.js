@@ -1,13 +1,15 @@
 import axios from "axios";
 
 const service = axios.create({
-  baseURL: "https://ironhack-pokeapi.herokuapp.com/pokemon",
-});
-
-
+  // baseURL: "http://localhost:3080"+"/api",
+  baseURL: process.env.REACT_APP_BACKEND_URL+"/api",
+})
+const get = (_) => service.get("/test").then(res=>res.data).catch(err=>console.log(err));
+const getOne = (id) => service.get("/" + id).then(res=>res.data).catch(err=>console.log(err));
+const createOne = (data) => service.post("/laroute-du-post", data).then(res=>res.data).catch(err=>console.log(err));
 export default {
   service,
-  getPokemons = _ => service.get("/"),
-  getOne = id => service.get("/" + id),
-  createOne = data => service.post("/laroute-du-post", data)
+  get,
+  getOne,
+  createOne,
 };

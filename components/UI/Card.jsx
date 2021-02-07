@@ -10,6 +10,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 import Collapse from '@material-ui/core/Collapse';
 import clsx from 'clsx';
+import colorContext from "../Context"
 
 import {
   faNodeJs,
@@ -60,7 +61,6 @@ const styleJSS = (props) => ({
 
 function CardExPro({ data, expPro, highlight, context, ...props }) {
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -99,10 +99,7 @@ function CardExPro({ data, expPro, highlight, context, ...props }) {
           <div className={expanded ? "logo-bannier slide-in-right" : "logo-bannier"} onClick={handleExpandClick}>
             {stack
               // .sort((a, b) => a.name.localeCompare(b.name))
-              .map((elem, i) => (
-                <LogoCard key={i} data={elem} fontawersome={lib[elem.fontAwersome]} expanded={expanded} />
-                // elem.fontAwersome && <LogoCard><FontAwesomeIcon key={i} icon={lib[elem.fontAwersome]} /><p>{elem.name}</p></LogoCard>
-              ))}
+              .map((elem, i) => <LogoCard key={i} data={elem} fontawersome={lib[elem.fontAwersome]} expanded={expanded} />)}
           </div>
         )}
       </CardContent>
@@ -133,8 +130,8 @@ function CardFormation({ data, ...props }) {
         </div>
       )}
       <CardContent>
-        <div className="flex right">
-          <h2 className={"title"}>{title}</h2>
+        <div className="flex">
+          <h2 className={"position " + classes.position}>{title}</h2>
           {/* <div className="triangle position"/> */}
         </div>
         <ul className="details">

@@ -1,0 +1,35 @@
+.flex {
+  display: flex;
+}
+
+.picture {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+  /* animation: 0.7s profil-animation cubic-bezier(0.86, 0, 0.07, 1) 0.4s; */
+}
+
+.element {
+    /* composes: second-color from "../../../styles/vars.css"; */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-items: start;
+  align-items: center;
+  padding: 16px 0;
+  color: white
+  /* border-bottom: 1px solid var(--second-color); */
+  /* padding: 16px; */
+}
+
+.element .picto {
+  justify-self: center;
+
+  /* padding: 16px; */
+}
+
+.gradient-line {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--second-color) 0%, rgba(57, 164, 221, 1) 100%);
+  /* linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(57,164,221,1) 100%); */
+}

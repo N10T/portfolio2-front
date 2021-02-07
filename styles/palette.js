@@ -35,6 +35,9 @@ const theme2 = createMuiTheme({
 
 const themes = [theme1, theme2]
 let theme = themes[0]
+/**
+ * @param  {number} "the index of the array"
+ */
 function changeTheme(number) {
   theme = themes[number]
   console.log(console.log('%c Theme change ! ', 'background: #222; color: #bada55'))

@@ -69,6 +69,8 @@ export default function App({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <link rel="icon" type="image/x-ico" href={`./images/dev-icon/dev-icon-0.ico`} />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg></script>
+       
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

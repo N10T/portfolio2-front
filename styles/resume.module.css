@@ -1,0 +1,89 @@
+.grid-container {
+  margin: 32px 0;
+}
+
+.resumeContainer {
+  display: flex;
+  justify-content: center;
+  composes: second-background-color from "./vars.css";
+}
+
+.resumeContainer #profile {
+  grid-area: profile;
+  position: relative;
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#work {
+  grid-area: work;
+}
+
+#education {
+  grid-area: education;
+}
+
+#hobbies {
+  grid-area: hobbies;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 3fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 16px;
+  grid-template-areas:
+    "profile work"
+    "profile education"
+    "profile hobbies";
+  /* animation: 0.7s curtain cubic-bezier(0.86, 0, 0.07, 1) 0.4s; */
+}
+
+@keyframes curtain {
+  0% {
+    grid-gap: 100vw;
+  }
+
+  100% {
+    grid-gap: 16px;
+  }
+}
+
+@keyframes profil-animation {
+  0% {
+    height: 0;
+    width: 100%;
+  }
+
+  100% {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 4px;
+    grid-template-areas:
+      "profile"
+      "work"
+      "education"
+      "hobbies";
+  }
+
+  .flex {
+    flex-direction: unset;
+  }
+
+  .horizontal {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .grid-container {
+    width: 70%;
+  }
+}

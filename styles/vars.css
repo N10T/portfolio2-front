@@ -1,0 +1,23 @@
+.main-background-color {
+  background-color: rgb(85, 170, 221);
+}
+
+.second-background-color {
+  background-color: #eae8e7;
+}
+
+.second-background-dark {
+  background-color: #767270;
+}
+
+.main-color {
+  color: rgb(85, 170, 221);
+}
+
+.second-color-backgroundColor {
+  color: #eae8e7;
+}
+
+.second-color-dark {
+  color: #767270;
+}

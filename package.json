@@ -24,6 +24,7 @@
     "i18next": "^19.8.2",
     "next": "latest",
     "react": "^16.8.6",
+    "react-bulma-components": "^3.4.0",
     "react-dayjs": "^0.1.6",
     "react-dom": "^16.8.6",
     "react-dotenv": "^0.1.3",

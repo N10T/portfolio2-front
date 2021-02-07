@@ -1,3 +1,11 @@
+.picture {
+  background-position-x: -20px;
+  background-size: 115%;
+    height: 250px;
+    width: 100%;
+    /* animation: 0.7s profil-animation cubic-bezier(0.86, 0, 0.07, 1) 0.4s; */
+}
+
 .grid-container {
   margin: 32px 0;
 }
@@ -8,11 +16,12 @@
   composes: second-background-color from "./vars.css";
 }
 
-.resumeContainer #profile {
+.profile {
   grid-area: profile;
   position: relative;
   color: white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
 }
 
 #work {

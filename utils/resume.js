@@ -10,18 +10,33 @@ export default {
       company: {
         name: "Mood",
         logoURL:
-          "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/ajracsdqu5gmyfl6nai0",
-        url: "https://ironhack.com/en",
+          "./images/resume/Mood.png",
+        url: "https://www.instagram.com/mood_team/?hl=fr",
       },
       date: { from: dayjs("01/12/2018", "DD/MM/YYYY"), to: dayjs("24/09/2019", "DD/MM/YYYY") },
       city: "Paris",
       details: [
-        "Assister le professeur lors des leçons en anglais.",
-        "Corriger les exercices journaliers, commenter ou proposer des solutions.",
-        "Apprendre aux élèves une méthodologie de travail, à lire et débugger leur code.",
-        "Identifier les besoins et faire des renforcements sur des sujets demandés.",
-        "Effectuer un suivi individuel moral et technique sur les 9 semaines de classe.",
-        "Code review",
+        "Assister les gérants dans la mises en place des process",
+        "Creation des outils de gestion des stocks",
+        "Creation des outils de suivi RH",
+        "Rationalisation des couts",
+      ],
+    },
+    {
+      title: "Developpeur freelance",
+      company: {
+        name: "&Digital",
+        logoURL:
+          "./images/resume/andigital.png",
+        url: "https://www.instagram.com/mood_team/?hl=fr",
+      },
+      date: { from: dayjs("01/03/2020", "DD/MM/YYYY"), to: dayjs() },
+      city: "Paris",
+      details: [
+        "Assister les clients dans la mise ne place de leur projet",
+        "Creation Front-end",
+        "Creation Back-end",
+        "Soutien en UX/UI",
       ],
     },
     {
@@ -35,11 +50,10 @@ export default {
       date: { from: dayjs("24/08/2020", "DD/MM/YYYY"), to: dayjs() },
       city: "Paris",
       details: [
-        "Assister le professeur lors des leçons en anglais.",
-        "Corriger les exercices journaliers, commenter ou proposer des solutions.",
-        "Apprendre aux élèves une méthodologie de travail, à lire et débugger leur code.",
-        "Identifier les besoins et faire des renforcements sur des sujets demandés.",
-        "Effectuer un suivi individuel moral et technique sur les 9 semaines de classe.",
+        "Assister le lead teacher lors des cours en anglais",
+        "Corriger les exercices journaliers, commenter ou proposer des solutions",
+        "Apprendre aux élèves une méthodologie de travail, à lire et débugger leur code",
+        "Identifier les besoins et faire des renforcements sur des sujets demandés",
         "Code review",
       ],
       stack: [
@@ -151,7 +165,7 @@ export default {
         logoURL: "https://upload.wikimedia.org/wikipedia/commons/9/95/Logo-UCPA-2015.jpg",
         url: "https://www.ucpa.com/",
       },
-      date: { from: dayjs("01/05/2011", "DD/MM/YYYY"), to: dayjs("31/04/2017", "DD/MM/YYYY") },
+      date: { from: dayjs("01/06/2013", "DD/MM/YYYY"), to: dayjs("31/04/2017", "DD/MM/YYYY") },
       city: "Paris",
       building: "Espace Glisse Paris 18",
       details: [
@@ -168,7 +182,7 @@ export default {
         logoURL:
           "https://upload.wikimedia.org/wikipedia/fr/thumb/3/36/Logo_Noisy_Sec.svg/1200px-Logo_Noisy_Sec.svg.png",
       },
-      date: { from: dayjs("01/05/2011", "DD/MM/YYYY"), to: dayjs("31/04/2017", "DD/MM/YYYY") },
+      date: { from: dayjs("01/09/2009", "DD/MM/YYYY"), to: dayjs("31/04/2014", "DD/MM/YYYY") },
       city: "",
       details: [
         "Educateur multisports (Ville de Noisy le sec, Bobigny, La Courneuve, Paris)",

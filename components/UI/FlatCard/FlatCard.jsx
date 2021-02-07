@@ -18,37 +18,42 @@ function Card(props) {
         <h1>{props.title}</h1>
 
         <div className={`${style.elements} ${props.isHorizontal ? style.horizontal : ""}`}>
-          {props.array.map((element, i) => {
-            return (
-              <article key={i} className={`${style.element} flex`}>
-
-                {element.company && (
-                  <img className={style.icon} src={element.company.logoURL} alt="icon" />
+          {props.array.map((element, i) => (
+            <article key={i} className={`${style.element} flex`}>
+              {element.company && (
+                <img className={style.icon} src={element.company.logoURL} alt="icon" />
+              )}
+              <div>
+                <h2 className={style.title}>
+                  {element.title}{" "}
+                  {element.company?.name && "- " + (element.building || element.company.name)}
+                </h2>
+                {!props.noSubtitle && (
+                  <h3 className={style.subtitle}>
+                    {element.date &&
+                      element.date.from.format("DD/MM/YY") +
+                        " - " +
+                        element.date.to.format("DD/MM/YY") +
+                        " - " +
+                        element.date.duree}
+                  </h3>
                 )}
-                <div>
-                  <h2 className={style.title}>
-                    {element.title} {element.company?.name && "- " + (element.building || element.company.name)}
-                  </h2>
-                  {!props.noSubtitle && (
-                    <h3 className={style.subtitle}>
-                      {element.date &&
-                        element.date.from.format("DD/MM/YY") +
-                          " - " +
-                          element.date.to.format("DD/MM/YY") +
-                          " - " +
-                          element.date.duree}
-                    </h3>
-                  )}
-                  {!props.noDescription && (
-                    <ul className={style.description}>
-                      {element.details &&
-                        element.details.map((detail, i) => <li className={props.id === "education" && style.marginLeft} key={i + "detail"}>{detail}</li>)}
-                    </ul>
-                  )}
-                </div>
-              </article>
-            );
-          })}
+                {!props.noDescription && (
+                  <ul className={style.description}>
+                    {element.details &&
+                      element.details.map((detail, i) => (
+                        <li
+                          className={props.id === "education" && style.marginLeft}
+                          key={i + "detail"}
+                        >
+                          {detail}
+                        </li>
+                      ))}
+                  </ul>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

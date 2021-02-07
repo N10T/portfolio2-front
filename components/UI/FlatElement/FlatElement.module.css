@@ -2,12 +2,7 @@
   display: flex;
 }
 
-.picture {
-  object-fit: cover;
-  height: 250px;
-  width: 100%;
-  /* animation: 0.7s profil-animation cubic-bezier(0.86, 0, 0.07, 1) 0.4s; */
-}
+
 
 .element {
     /* composes: second-color from "../../../styles/vars.css"; */

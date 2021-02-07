@@ -15,10 +15,6 @@ import Button from "../components/UI/Button";
 // import { FormattedString } from "react-i18next";
 
 console.log(process.env.REACT_APP_BACKEND_URL)
-api
-  .get()
-  .then((res) => console.log(res))
-  .catch((err) => console.error(err));
 
 function Home({ context }) {
   //   const {lng,resources,chooseLng} = context

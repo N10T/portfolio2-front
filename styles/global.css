@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap");
-
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css");
 :root {
   --main-color: rgb(85, 170, 221);
   --second-color: #eae8e7;
@@ -46,6 +46,10 @@ img {
 }
 .text-center {
   text-align: center;
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 .band {
